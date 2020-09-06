@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor {
+    width: 800px;
+    margin: 0 auto;
+    border: 4px solid black;
+    /*ponemos al contenedor en posicion raltiva, y todo lo que queramos meter dentro, en posicion absoluta*/
+    position: relative;
+    /*todo lo que salga del borde del elemento, desaparece con overflow: hidden*/
+    overflow: hidden;
+}
+
+.contenedor .titulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding-top: 25%;
+    color: white;
+    font-size: 200%;
+    transition: 1s background-color;
+}
+
+.contenedor .titulo h3 {
+    position: absolute;
+    left: -500px;
+    transition: 1s;
+}
+
+.contenedor:hover h3 {
+    left: 30%;
+}
+
+.contenedor:hover .titulo{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contenedor img {
+    transition: 1s;
+}
+
+.contenedor:hover img {
+    transform: rotate(10deg) scale(1.25);
+   
+}
